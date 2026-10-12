@@ -1,0 +1,193 @@
+/* Base colors*/
+:root {
+    --primary-color: #4a5568;
+    --accent-color: #3182ce;
+    --text-color: #2d3748;
+    --light-bg: #f7fafc;
+    --dark-bg: #edf2f7;
+    --font-stack: system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-stack);
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--light-bg);
+}
+
+/* Navbar */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Sections */
+.site-section {
+    padding: 5rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.section-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+.alternate-bg {
+    background-color: var(--dark-bg);
+}
+
+h1, h2 {
+    margin-bottom: 1.5rem;
+    color: #1a202c;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+/* Components */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.project-grid {
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.contact-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1a202c;
+    color: #a0aec0;
+    font-size: 0.875rem;
+}
+
+/* Certificates */
+.cert-grid {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cert-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    border-left: 4px solid var(--accent-color);
+}
+
+.cert-badge-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    background-color: var(--dark-bg);
+    padding: 0.75rem;
+    border-radius: 8px;
+}
+
+.cert-info h3 {
+    margin-bottom: 0.25rem;
+}
+
+.cert-issuer {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.cert-desc {
+    margin-bottom: 0rem;
+    font-size: 0.95rem;
+}
+
+.cert-link {
+    text-decoration: none;
+    color: #1a202c;
+    transition: color 0.2s ease;
+}
+
+.cert-link:hover {
+    color: var(--accent-color); 
+    text-decoration: underline; 
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .cert-card {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
